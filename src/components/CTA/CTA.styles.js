@@ -7,13 +7,13 @@ export const StyledImg = styled(GatsbyImage)`
   }
 `
 
-export const CTAImage = styled.div`
+export const Wrapper = styled.div`
   margin-bottom: 20px;
   max-height: 100px;
   position: relative;
   overflow: hidden;
 
-  :hover img {
+  &:hover img {
     transform: scale(1.1);
     filter: blur(2px);
   }
