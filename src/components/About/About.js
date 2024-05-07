@@ -6,11 +6,18 @@ import { Wrapper, AboutImage  } from './About.styles'
 const About = () => {
 
     const data = useAboutPage()
-    console.log(data)
+    // console.log(data)
+
+    const imageData = data.wpPage.featuredImage.node.localFile.publicURL
+    console.log(imageData)
+
 
   return (
     <Wrapper>
-      About test
+      <AboutImage image={imageData} />
+     <div className='about-text'>
+      <div dangerouslySetInnerHTML={{ __html: data.wpPage.content}} />
+     </div>
     </Wrapper>
     
   )

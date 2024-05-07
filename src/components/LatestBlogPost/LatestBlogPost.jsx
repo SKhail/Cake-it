@@ -6,7 +6,7 @@ import { Wrapper } from './LatestBlogPost.styles'
 const LatestBlogPost = () => {
 
  const data = useBlogPost();
- console.log(data)
+//  console.log(data)
  
   return (
     <Wrapper>
