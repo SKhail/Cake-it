@@ -5,6 +5,7 @@ import Layout from '../components/Layout/Layout'
 import Hero from '../components/Hero/Hero'
 import CTAArea from '../components/CTAArea/CTArea'
 import LatestBlogPost from "../components/LatestBlogPost/LatestBlogPost";
+import Quote from "../components/Quote/Quote";
 
 const IndexPage = () => ( 
 <StyleSheetManager shouldForwardProp={(prop) => prop !== 'menuOpen'}> 
@@ -14,7 +15,8 @@ const IndexPage = () => (
   <Seo title="Home" />
       <Hero/>
       <CTAArea />
-      <LatestBlogPost/>
+      <LatestBlogPost />
+      <Quote />
 </Layout>
 </StyleSheetManager>
 
