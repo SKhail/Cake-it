@@ -5,6 +5,8 @@ import { StyleSheetManager } from 'styled-components';
 
 //components
 import Layout from '../components/Layout/Layout'
+import PageHero from '../components/PageHero/PageHero';
+import BreadCrumb from '../components/BreadCrumb/BreadCrumb';
 
 const Wrapper = styled.div
 `
@@ -32,10 +34,17 @@ const PageContent = styled.article
 const PageTemplate = ({ data }) => (
 <StyleSheetManager shouldForwardProp={(prop) => prop !== 'menuOpen'}> 
     <Layout>
-    {console.log(data)}
-    <p>PageBoy</p>
+   {data.wpPage.featuredImage ? (
+    <PageHero
+          img={
+            data.wpPage.featuredImage.node.localFile.childImageSharp.gatsbyImageData
+          } 
+          />
+   ) : null }
 
     <Wrapper>
+    {/* {console.log("Parent data:", data.wpPage.wpParent)} */}
+    <BreadCrumb parent={data.wpPage.wpParent && data.wpPage.wpParent.node} />
 
     <p>SideBar</p>
     <p>Content</p>
